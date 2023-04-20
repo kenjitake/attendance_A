@@ -2,6 +2,32 @@
 
 <h1>アカウント作成</h1>
 
-<%= form_with(model: @user, users_path, local: true) do |f| %>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
 
-<% end %>
+    <%= form_with(model: @user, local: true) do |f| %>
+      <%= render 'shared/error_messages' %>
+
+      <%= f.label :name, class: "signup-user" %>
+      <%= f.text_field :name, class: "form-control" %>
+  
+      <%= f.label :department, class: "signup-user" %>
+      <%= f.text_field :department, class: "form-control" %>
+  
+      <%= f.label :employee_number, class: "signup-user" %>
+      <%= f.text_field :employee_number, class: "form-control" %>
+  
+      <%= f.label :cardID, class: "signup-user" %>
+      <%= f.text_field :cardID, class: "form-control" %>
+    
+      <%= f.label :password, class: "signup-user" %>
+      <%= f.password_field :password, class: "form-control" %>
+  
+      <%= f.label :password_confirmation, "Confirmation", class: "signup-user" %>
+      <%= f.password_field :password_confirmation, class: "form-control" %>
+  
+      <%= f.submit "作成", class: "btn btn-block btn-primary btn-signup" %>
+
+    <% end %>
+  </div>
+</div>
