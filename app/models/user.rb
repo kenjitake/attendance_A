@@ -10,11 +10,11 @@ class User < ApplicationRecord
   
   validates:cardID, presence: true
   
-  VALID_EMAIL_REGIX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   
-  validates:email, presence: true, length: { maximum: 50 },
-                 format: { with: VALID_EMAIL_REGIX }
-  
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  validates :email, presence: true, length: { maximum: 100 },
+                    format: { with: VALID_EMAIL_REGEX }, uniqueness: true
+                      
   has_secure_password
   validates:password, presence:true, length: { minimum: 6 }
 
