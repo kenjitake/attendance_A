@@ -1,0 +1,25 @@
+<% provide(:title, 'Edit') %>
+
+<h1>edit</h1>
+
+<div class= "row">
+  <div class= "col col-md-6 col-md-offset-3">
+    <%= form_with(model: @user, method: :patch, local: true) do |f| %>
+      <%= render 'shared/error_messages' %>
+    
+      <%= f.label: name, class: "edit-user" %>
+      <%= f.text_label: name, class: "form-control" %>
+    
+      <%= f.label: email, class: "edit-user" %>
+      <%= f.email_label: email, class: "form-control" %>
+    
+      <%= f.label: department, class: "edit-user" %>
+      <%= f.text_label: department, class: "form-control" %>
+    
+      <%= f.label: employee_number, class: "edit-user" %>
+      <%= f.text_label: empployee_number, class: "form-control" %>
+    
+      <%= f.submit "更新", class: "btn btn-primary btn-block edit-user-btn" %>
+    <% end %>
+  </div>
+</div>
