@@ -1,4 +1,13 @@
-/* ユーザーテーブル */
+/*　ユーザー情報テーブル */
+
+.user-table {
+  vertical-align: middle;
+  text-align: center;
+  margin-top: 30px;
+}
+
+
+/* ユーザー入力フォーム */
 
 .label-signup {
   margin-top: 5px;
@@ -8,11 +17,6 @@
   margin-top: 10px;
 }
 
-.user-table {
-  vertical-align: middle;
-  text-align: center;
-  margin-top: 30px;
-}
 
 .label-user--edit {
   margin-top: 5px;
@@ -20,4 +24,13 @@
 
 .btn-user--edit {
   margin-top: 10px;
+}
+
+
+/*　ユーザー一覧テーブル */
+
+#table-users {
+  td {
+    vertical-align: middle;
+  }
 }

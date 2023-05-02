@@ -2,18 +2,30 @@
 
 <h1>ユーザ一覧</h1>
 
-<div class= col-md-10 col-md-offset-1>
-  <table class= "table table-condensed users-table">
+<div class= "col-md-10 col-md-offset-1">
+  <%= will_paginate %>
+  
+  <table class= "table table-condensed", id= "table-users">
+    <thead>
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+    </thead>
     
-    <tr>
-      <td></td>
-      <td></td>
-    </tr>
-    <%= @users.each do |user| %>
+    <% @users.each do |user| %>
     <tr>
       <td><%= link_to user.name, user %></td>
-      <td></td>
+      <td>
+      <% if current_user.admin? && !current_user?(user) %>
+        <%= link_to "削除", user, method: :delete,
+          data: { confirm: "削除してもよろしいですか？" },
+          class: "btn btn-danger" %>
+      <% end %>
+      </td>
     </tr>
+    <% end %>
   </table>
+  
+  <%= will_paginate %>
 </div>
-
