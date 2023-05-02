@@ -2,3 +2,15 @@
 
 <h1>ユーザ一覧</h1>
 
+<div>
+  <table class= "table table-bordered table-condensed users-table">
+    <%= @users.each do |user| %>
+    <tr>
+      <td><%= user.name %></td>
+      <td></td>
+    </tr>
+    <tr></tr>
+    <tr></tr>
+  </table>
+</div>
+
