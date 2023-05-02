@@ -6,10 +6,10 @@
   <div class= "col col-md-6 col-md-offset-3">
     <%= form_with(scope: :session, url: login_path, local: true) do |f| %>
     
-      <%= f.label :email, class: "login-label" %>
+      <%= f.label :email, "メールアドレス", class: "login-label" %>
       <%= f.email_field :email, class: "form-control" %>
     
-      <%= f.label :password, class: "login-label" %>
+      <%= f.label :password, "パスワード", class: "login-label" %>
       <%= f.password_field :password, class: "form-control" %>
       
       <%= f.label :remember_me, class: "checkbox inline checkbox-login", for: "remember-me" do %>
