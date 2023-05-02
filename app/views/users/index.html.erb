@@ -2,15 +2,18 @@
 
 <h1>ユーザ一覧</h1>
 
-<div>
-  <table class= "table table-bordered table-condensed users-table">
-    <%= @users.each do |user| %>
+<div class= col-md-10 col-md-offset-1>
+  <table class= "table table-condensed users-table">
+    
     <tr>
-      <td><%= user.name %></td>
+      <td></td>
       <td></td>
     </tr>
-    <tr></tr>
-    <tr></tr>
+    <%= @users.each do |user| %>
+    <tr>
+      <td><%= link_to user.name, user %></td>
+      <td></td>
+    </tr>
   </table>
 </div>
 
